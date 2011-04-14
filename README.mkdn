@@ -28,7 +28,7 @@ Getting Started
 
 To create a Compass project using Less Framework, enter:
 
-    compass create -r less my_project --using less
+    compass create -r compass-less-plugin my_project --using compass-less-plugin
 
 The above command will generate a directory named `my_project` populated with
 the Compass project files. If you look in the project `src` directory, you will
