@@ -1,9 +1,7 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-
 Gem::Specification.new do |s|
   s.name        = "compass-less-plugin"
-  s.version     = "1.0"
+  s.version     = "1.0.1"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["William Wells"]
   s.email       = ["less@hapa.me"]
@@ -13,10 +11,14 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "compass-less-plugin"
 
-  s.add_dependency "compass", ">= 0.10"
+  # Gem Files
+  s.files = %w(README.mkdn)
+  s.files += Dir.glob("lib/**/*.*")
+  s.files += Dir.glob("stylesheets/**/*.*")
+  s.files += Dir.glob("templates/**/*.*")
 
-  s.files = `git ls-files`.split("\n")
-
+  # Gem Bookkeeping
   s.has_rdoc = false
-  s.require_paths = ["lib"]
+  s.rubygems_version = %q{1.3.6}
+  s.add_dependency("compass", [">= 0.10"])
 end
